@@ -39,7 +39,7 @@ class ChannelDispatcher
             // ignore ...
         }
 
-        $this->isolator()->pcntl_signal_dispatch();
+        // $this->isolator()->pcntl_signal_dispatch();
     }
 
     private $timeout;
