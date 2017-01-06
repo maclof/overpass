@@ -1,6 +1,6 @@
 {
     "name": "icecave/overpass",
-    "description": "A basic pub/sub and RPC system.",
+    "description": "A basic pub/sub, RPC and task queue system.",
     "keywords": [
         "pubsub",
         "publish",
@@ -10,6 +10,9 @@
         "remote",
         "procedure",
         "call",
+        "task",
+        "queue",
+        "job",
         "amqp",
         "rabbit"
     ],
@@ -24,26 +27,23 @@
     ],
     "require": {
         "php": ">=5.5",
-        "ext-pcntl": "*",
-        "eloquent/enumeration": "~5",
-        "icecave/isolator": "~2|~3",
-        "icecave/repr": "~1",
-        "psr/log": "~1",
-        "videlalvaro/php-amqplib": "~2.4"
+        "eloquent/enumeration": "^5",
+        "icecave/isolator": "^2|^3",
+        "icecave/repr": "^1",
+        "php-amqplib/php-amqplib": "^2.6",
+        "psr/log": "^1"
     },
     "require-dev": {
-        "eloquent/asplode": "~2",
-        "icecave/archer": "~1",
-        "icecave/stump": "~0.3.0"
+        "eloquent/asplode": "^2",
+        "icecave/archer": "dev-develop",
+        "icecave/stump": "^0.3",
+        "phake/phake": "^1",
+        "phpunit/phpunit": "^4",
+        "sami/sami": "^3"
     },
     "autoload": {
         "psr-4": {
             "Icecave\\Overpass\\": "src"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-develop": "0.3.x-dev"
         }
     }
 }
